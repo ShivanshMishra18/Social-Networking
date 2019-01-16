@@ -1,0 +1,36 @@
+{% extends 'website/base.html' %}
+{% block title %} My Profile {% endblock %}
+{% block body %}
+
+	{% if error_message %}
+		<p><strong>{{ error_message }}</strong></p>
+	{% endif %}
+
+	<h3>About Me</h3>
+	<br>
+
+	<h4>{{person.Name}}</h4>
+
+<!-- 	<table class="table">
+
+		<thead>
+			<th>Work Description</th>
+			<th>Is Completed</th>
+			<th>File Type</th>
+		</thead>>	
+
+		{% for work in person.work_set.all %}
+		<tr>
+			<td>{{ work.Work_Descr }}</td>
+			<td>				
+			{% if work.Is_completed %}
+			<img src="http://i.imgur.com/b9b13Rd.png">
+			{% endif %}
+			</td>
+			<td>{{ work.File_Type }}</td>
+		</tr>
+		{% endfor %}
+	</table>	 -->
+
+
+{% endblock %}
